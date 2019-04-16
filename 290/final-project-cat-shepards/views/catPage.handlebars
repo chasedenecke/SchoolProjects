@@ -1,0 +1,19 @@
+
+  {{> header}}
+
+
+    <main class="cat-container">
+
+      {{#each cat}}
+        {{> catCard}}
+      {{/each}}
+
+    </main>
+
+    <article class="add-cat cat-item">
+        <div class = "add-icon">
+        <button type = "button" id="add-cat-button"> <i class = "fa fa-plus-square"></i></button>
+        </div>
+     </article>
+
+  {{> createCatModal}}

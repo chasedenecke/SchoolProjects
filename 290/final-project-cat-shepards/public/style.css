@@ -1,0 +1,295 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	background-color: #f2e9ce;
+	margin: 0;
+}
+
+.hidden {
+	display: none;
+}
+.site-title {
+	margin: 0;
+	text-align: center;
+	background-color: #f29e38;
+}
+
+.navbar {
+	margin: 0;
+	background-color: white;
+}
+.navlist {
+	list-style: none;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 300;
+	color: #1f0501;
+}
+
+.navitem {
+	display: inline-block;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: 300;
+	color: #1f0501;
+}
+
+.navbar-search {
+	float: right;
+	margin-right: 10px;
+
+}
+
+.navlink:hover {
+	background-color: rgba(255, 213, 149, 0.38);
+	cursor: pointer;
+}
+
+#navbar-search-input {
+	font-size: 15px;
+	width: 300px;
+	background-color: #e2dfd9;
+	border: 1px solid #d2cfcb;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+#navbar-search-input:focus {
+	background-color: white;
+}
+
+#navbar-search-button {
+	border: none;
+	font-size: 20px;
+	background-color: white;
+}
+
+#navbar-search-button:hover {
+	color: #f29e38;
+	cursor: pointer;
+}
+
+
+#add-cat-button {
+	position: fixed;
+	font-size: 60px;
+	color: #f29e38;
+	border:none;
+	padding:7px;
+	background-color: #f2e9ce;
+    margin: 0;
+    text-shadow: 5px 5px 13px #c4bfbf;
+    float: right;
+    right: 20px;
+    bottom: 20px;
+
+}
+
+#add-cat-button:hover {
+	font-size: 62px;
+	color: #a53b19;
+	cursor:pointer;
+
+
+}
+.cat-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 70px;
+	margin-right: 70px;
+}
+
+.cat-card {
+	margin: 5px;
+	display: flex;
+	justify-content: space-around;
+	flex: 0 1 28%;
+}
+
+.cat-card-content {
+	background-color: #ffffff;
+	border: 1px solid #f5f5f5;
+	border-radius: 3px;
+	padding: 10px;
+	margin: auto;
+	justify-content: center;
+	flex: 0 1 88%;
+}
+
+.cat-item {
+	margin: 10px;
+	align-items: center;
+}
+
+.cat-card-photo {
+	display: block;
+  max-height: 200px;
+  text-align:  center;
+	margin: auto;
+}
+
+.cat-card-photo:hover {
+
+}
+
+.cat-caption {
+	text-align: center;
+}
+
+.cat-author {
+	text-align: center;
+	font-size: 12px;
+}
+
+.upvote-button {
+	border: none;
+	background-color: white;
+	font-size: 25px;
+	color: #f29d45;
+	float: right;
+}
+
+.upvote-button:hover {
+	color: #a4391a;
+	text-shadow: 2px 2px 8px #bfb7b7;
+	cursor: pointer;
+
+}
+
+.error-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.error-container h2 {
+  margin: 10px 0;
+  font-size: 96px;
+  font-weight: 100;
+}
+
+.error-container h3 {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#create-cat-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+.modal-dialog {
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.modal-header {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.cat-input-element {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.cat-input-element label {
+  font-weight: 600;
+  flex: 1 75px;
+  margin-right: 10px;
+}
+
+.cat-input-element input,
+.cat-input-element textarea {
+  flex: 6 200px;
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid #aaa;
+}
+
+.cat-input-element textarea {
+  min-height: 64px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 20px 10px;
+}
+
+.modal-footer button {
+  font-size: 20px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #aaaaaa;
+  border-radius: 2px;
+  padding: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.modal-footer .modal-cancel-button:hover {
+  background-color: #eee;
+}
+
+.modal-footer .modal-accept-button {
+  background-color: #f29d45;
+  color: #fff;
+}
+
+.modal-footer .modal-accept-button:hover {
+  background-color: #a43a1a;
+}
