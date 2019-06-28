@@ -1,0 +1,6 @@
+[submodule "RA_Assessor/RA_application"]
+	path = RA_Assessor/RA_application
+	url = https://github.com/jmanosu/RA_application.git
+[submodule "RA_Assessor/RA_Server"]
+	path = RA_Assessor/RA_Server
+	url = https://github.com/jmanosu/RA_Server.git

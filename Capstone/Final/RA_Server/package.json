@@ -1,0 +1,22 @@
+{
+  "name": "ra_server",
+  "version": "1.0.0",
+  "description": "Simple Server for RA application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "crypto": "^1.0.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongodb": "^3.2.3",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "node-datetime": "^2.1.2"
+  }
+}

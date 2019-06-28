@@ -1,0 +1,47 @@
+\documentclass[10pt,journal,draftclsnofoot,onecolumn]{IEEEtran}
+
+\input epsf
+\usepackage{graphicx}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{authblk}
+
+\hyphenation{bio-marker detection}
+\begin{document}
+
+\title{\LARGE Phone app for determining Rheumatoid arthritis}
+
+\author[1]{Ethan Patterson}
+\affil[1]{CS 461 Fall 2018}
+
+\maketitle
+
+\begin{abstract}
+The Goal of this application is to measure the disease activity of rheumatoid arthritis. This will be accomplished by looking for biomarkers in a patient's’ hand. Currently there are only three primary ways to measure rheumatoid arthritis activity: intensive clinical studies, blood test from VectraDA, and patient self-reporting. The first two ways of detection are rather expensive. We will be looking into the possibility of using a neural network, and other data analysis tools, to evaluate a patient’s hand and give a probability of a potential flare up. If this method is possible we will be able to drastically reduce prices of detection and bring professional detection to anyone with a smartphone. If possible, this will also help advance future research to be able to use biomarkers as a predictor of medical issues.
+\end{abstract}
+
+\section{Introducing the problem}
+Rheumatoid arthritis is an autoimmune disease that affects nearly 1.3 million humans in the United States, more so worldwide. It is a condition in which a human body’s own immune system, usually for attacking foreign substances in the body, mistakenly targets joint tissue as an invading substance. This causes chronic pain for those affected and the swelling of joints in the affected area. There are often periods of time were an affected individual will experience an increased amount of swelling and pain, this is often referred to as a “flare”. There is currently no cure for rheumatoid arthritis.
+These flares are most often treated with steroids, pain relievers, acetaminophen, or immune system-suppressing medication. All treatments that exist to this day aim to minimize patient suffering by minimizing the condition’s symptoms. The disease severity varies from person to person and changes, or worsening, of symptoms are difficult for doctors to detect. The only method that doctors can use to get an accurate picture of an individual’s symptom progress and prediction of their future is through an expensive Vectra DA blood test. This helps a medical professional derive a treatment plan for the affected individual. This treatment is valuable and produces results, it is an expensive process and can take up to a week to make a simple quick strategy for treating a patience rheumatoid arthritis. 
+Thus, there is a need for a less expensive, faster, and invasive process to help those affected with this disease. Some methods have been proposed, such as an a priori specified increases in disease activity score (DASs) [1], however there has been little consensus for this system. Additionally, others and , are unaware of any reports that show the reliability of this flare indicator. Another system that is similar is the use of DAS worsening criteria, this solution shows little correlation as well.
+
+\newpage
+\section{Solution}
+What we will be looking for are biomarkers that could potentially indicate or have some correlation with these flare-ups, using data analysis tools and machine learning. The first step will be to collect data from patients. Once this data has been collected we will begin the second step to process this data through a variety of different ways, looking at data from different angles for these possible biomarker correlations.
+Machine learning has been a hot topic in recent years as a data analysis tool. The subset of machine learning, including neural networks, has been especially interesting. Neural networks have been able to find correlations between connections in data that humans have otherwise been unable to see. Using these techniques, we will mine the data. Once these correlations have been identified we wish to transfer this identification software to a smartphone to provide an easily accessible, cost effective, and less invasive process to those affected with this disease. This smartphone application will be able to assist users by; taking a picture of their hand, identifying what portion of the image is relevant for measuring a possible flare, collecting the dimensions, and surface area, of the individual’s hand, identifying knuckles and other relevant hand structures, comparing other individuals image data for correlations, and if possible, create a predictive model of disease based on hand inflammation for the user.
+If this is possible, this will not only help individuals with this autoimmune disease. The algorithms and techniques produced from this process, in theory, could be transferred to other biomarker identification problems across the medical field. This could help save, prevent, or reduce suffering for many more people. 
+
+\section{Performance Metrics}
+Collecting the data is the most difficult part here and is what Karate Health will be working to obtain. During our meeting with Brett, one of the founders of Karate Health, he shared with us how he will be reaching out to patients he has in his database. One proposal by Brett was to have users fill out a questionnaire and submit photos of their affected hands. The idea of having clients produce their own photos with using their digital cameras in an uncontrolled environment might present some data loss. This data loss is being assumed because most digital cameras use a method called white balancing. This method is the global adjustment of colors in a photo. Even if possible to revert a white balanced photo, we will still have issues with the environment the photos are taken in. Digital cameras in phones are very sensitive to the change in light, light will change depending on types of lighting in a room, or gases concentration in the surrounding atmosphere.
+Objectives such as measuring the surface area of the hand can be approximated using the Douglas-Peucker algorithm to subdivide polygons to obtain this.
+A feature can be developed to help users take images of their hand to ensure consistency of the images, and so background features can be identified as not part of the hand.
+Using image analysis, we can identify knuckles or other relevant hand features given enough close up sub-images of hands. These sub-images can train a neural network to identify the structure of hand.
+These are the goals our client has given us to use during our first meeting. We plan to reach out to our client this weekend, by email, to present some of the challenges these goals will have given the data they will be collecting.
+
+\begin{thebibliography}{1}
+\bibitem {cantrell1}
+V. P. Bykerk, C. O. Bingham, E. H. Choy, D. Lin, R. Alten, R. Christensen, S. Hewlett, A. Leong, L. March, G. Boire, B. Haraoui, C. Hitchon, S. Jamal, E. C. Keystone, J. Pope, D. Tin, J. C. Thorne, S. J. Bartlett, and Daniel E Furst,  \emph{ “Identifying flares in rheumatoid arthritis: reliability and construct validation of the OMERACT RA Flare Core Domain Set,” }, RMD Open, 01-May-2016. [Online]. Available: https://rmdopen.bmj.com/content/2/1/e000225. [Accessed: 11-Oct-2018].
+
+\bibitem {cantrell2}
+\emph {“Ramer–Douglas–Peucker algorithm,” }, Wikipedia, 14-Sep-2018. [Online]. Available: https://en.wikipedia.org/wiki/Ramer–Douglas–Peucker\_algorithm. [Accessed: 11-Oct-2018].
+\end{thebibliography}
+\end{document}
