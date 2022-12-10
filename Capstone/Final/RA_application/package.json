@@ -17,7 +17,7 @@
     "expo-2d-context": "0.0.2",
     "expo-asset-utils": "^1.0.0",
     "expo-pixi": "^1.0.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-camera": "^1.12.0",
